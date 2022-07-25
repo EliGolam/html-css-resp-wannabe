@@ -52,9 +52,15 @@ img {
     padding: 0 20px;
 }
 
-.row {
+.flex {
     display: flex;
+    flex-direction: column;
+        row-gap: 50px;
 }
+
+/* .row > * {
+    flex-grow: 1;
+} */
 
 .col {
     padding-left: 1rem;
@@ -132,13 +138,8 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
-@media only screen and (max-width: 480px) {
-    .row {
-        flex-direction: column;
-        row-gap: 50px;
-    }
-    
-    .row > * {
-        flex-grow: 1;
+@media only screen and (min-width: 480px) {
+    .flex {
+        flex-direction: row; 
     }
 }
